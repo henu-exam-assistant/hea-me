@@ -1,0 +1,13 @@
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin common-icon($size) {
+  width: $size;
+  height: $size;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
