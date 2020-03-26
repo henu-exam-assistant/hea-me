@@ -15,7 +15,7 @@ function App () {
           <Route path='/' exact component={HomePage} />
           <Route path='/home' component={HomePage} />
           <Route path='/login' component={LoginPage} />
-          <Route component={NoMatch} />
+          <Route render={(props) => <NoMatch {...{ ...props, redirectPath: '/home' }} />} />
         </Switch>
       </BrowserRouter>
     </section>
