@@ -3,7 +3,7 @@ import './index.scss'
 
 const LoginPage = () => {
   return (
-    <section className='login-page'>Login</section>
+    <section className='page login-page'>Login</section>
   )
 }
 
