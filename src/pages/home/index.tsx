@@ -1,10 +1,10 @@
 import React from 'react'
 import './index.scss'
 
-const Home = () => {
+const HomePage = () => {
   return (
-    <section className='home'>Home</section>
+    <section className='home-page'>Home</section>
   )
 }
 
-export default Home
+export default HomePage

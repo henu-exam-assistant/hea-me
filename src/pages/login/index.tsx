@@ -1,10 +1,10 @@
 import React from 'react'
 import './index.scss'
 
-const Login = () => {
+const LoginPage = () => {
   return (
-    <section className='login'>Login</section>
+    <section className='login-page'>Login</section>
   )
 }
 
-export default Login
+export default LoginPage
