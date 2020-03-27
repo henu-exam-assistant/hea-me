@@ -1,6 +1,40 @@
+import {
+  DashboardOutlined,
+  TeamOutlined,
+  TableOutlined,
+  SolutionOutlined,
+} from "@ant-design/icons";
+
 export const Config = {
-  apiUrl: '',
+  apiUrl: "",
+  home: {
+    routes: [
+      {
+        name: "管理中心",
+        to: "/home/console",
+        Icon: DashboardOutlined,
+      },
+      {
+        name: "教师管理",
+        to: "/home/teacher",
+        desc: "教师管理描述",
+        Icon: TeamOutlined,
+      },
+      {
+        name: "排考管理",
+        to: "/home/room",
+        desc: "排考管理描述",
+        Icon: TableOutlined,
+      },
+      {
+        name: "监考管理",
+        to: "/home/manage",
+        desc: "监考管理描述",
+        Icon: SolutionOutlined,
+      },
+    ],
+  },
   footer: {
-    content: '© 2020 软件学院排考系统'
-  }
-}
+    content: "© 2020 软件学院排考系统",
+  },
+};
