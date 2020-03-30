@@ -3,11 +3,11 @@ import { RouteComponentProps, Link } from 'react-router-dom'
 
 import './index.scss'
 
-interface IProps extends RouteComponentProps {
+interface Props extends RouteComponentProps {
   redirectPath: string
 }
 
-export const NoMatch: React.FC<IProps> = props => {
+export const NoMatch: React.FC<Props> = props => {
   const [countDown, setCountDown] = useState(3)
 
   const { redirectPath } = props
@@ -21,13 +21,20 @@ export const NoMatch: React.FC<IProps> = props => {
       }
     }, 1000)
 
-    return () => { clearInterval(interval) }
+    return () => {
+      clearInterval(interval)
+    }
   }, [countDown, props.history, redirectPath])
 
   return (
-    <section className='no-match'>
+    <section className="no-match">
       <p>404 NOT FOUND</p>
-      <p>{countDown}秒后<Link to={redirectPath} replace>自动跳转</Link></p>
+      <p>
+        {countDown}秒后
+        <Link to={redirectPath} replace>
+          自动跳转
+        </Link>
+      </p>
     </section>
   )
 }

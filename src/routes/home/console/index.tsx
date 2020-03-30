@@ -1,9 +1,9 @@
-import React from "react";
-import { RouteComponentProps } from "react-router-dom";
-import { Row, Col, Card } from "antd";
-import { Config } from "../../../config";
+import React from 'react'
+import { RouteComponentProps } from 'react-router-dom'
+import { Row, Col, Card } from 'antd'
+import { Config } from '../../../config'
 
-import "./index.scss";
+import './index.scss'
 
 export const Console: React.FC<RouteComponentProps> = props => {
   return (
@@ -14,13 +14,14 @@ export const Console: React.FC<RouteComponentProps> = props => {
             <Card
               title={elem.name}
               onClick={() => props.history.push(elem.to)}
-              style={{ cursor: "pointer" }}
+              style={{ cursor: 'pointer' }}
             >
               <p>{elem.desc}</p>
+              <p>{props.children}</p>
             </Card>
           </Col>
         ))}
       </Row>
     </section>
-  );
-};
+  )
+}

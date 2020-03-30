@@ -1,6 +1,6 @@
 // Home
 declare interface LeftNavItem {
-  name: string;
-  to: string;
-  icon: React.ReactElement;
+  name: string
+  to: string
+  icon: React.ReactElement
 }

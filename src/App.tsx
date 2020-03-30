@@ -7,15 +7,19 @@ import { NoMatch } from './components'
 
 import './App.scss'
 
-function App () {
+function App(): JSX.Element {
   return (
-    <section className='App'>
+    <section className="App">
       <BrowserRouter>
         <Switch>
-          <Route path='/' exact component={HomePage} />
-          <Route path='/home' component={HomePage} />
-          <Route path='/login' component={LoginPage} />
-          <Route render={(props) => <NoMatch {...{ ...props, redirectPath: '/home' }} />} />
+          <Route path="/" exact component={HomePage} />
+          <Route path="/home" component={HomePage} />
+          <Route path="/login" component={LoginPage} />
+          <Route
+            render={props => (
+              <NoMatch {...{ ...props, redirectPath: '/home' }} />
+            )}
+          />
         </Switch>
       </BrowserRouter>
     </section>
