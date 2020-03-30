@@ -1,0 +1,17 @@
+@import '../../style/common.scss';
+
+.common-space {
+  @include flex();
+
+  &-horizontal {
+    justify-content: space-between;
+
+    &-item {
+      margin-right: 10px;
+    }
+
+    &-item:last-child {
+      margin-right: 0;
+    }
+  }
+}

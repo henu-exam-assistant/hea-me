@@ -1,0 +1,7 @@
+@import '../../style/common.scss';
+
+.common-page-header {
+  @include flex();
+
+  justify-content: space-between;
+}
