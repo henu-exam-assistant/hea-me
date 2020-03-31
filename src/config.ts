@@ -42,3 +42,5 @@ export const Config = {
     content: '© 2020 软件学院排考系统',
   },
 }
+
+export const ossBaseUrl = 'https://pics.leezx.cn'
