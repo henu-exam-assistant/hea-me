@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, Table, Tag } from 'antd'
 import { PageHeader } from '../../../components'
 import { Config } from '../../../config'
+import { usePagination } from '../../../context'
 
 import './index.scss'
 
@@ -27,6 +28,8 @@ export const Room: React.FC = () => {
     },
   ]
 
+  const { pageSize, handleShowSizeChange } = usePagination()
+
   return (
     <section className='room'>
       <PageHeader text='考场列表'>
@@ -47,7 +50,10 @@ export const Room: React.FC = () => {
           }))}
           bordered={true}
           size='small'
-          pagination={{ pageSize: Config.home.room.table.pageSize }}
+          pagination={{
+            pageSize: pageSize || Config.home.room.table.pageSize,
+            onShowSizeChange: handleShowSizeChange,
+          }}
           rowKey='index'
         >
           <Column title='#' dataIndex='index' key='index' />

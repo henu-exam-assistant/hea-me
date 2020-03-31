@@ -2,6 +2,7 @@ import React from 'react'
 import { Input, Button, Table, Avatar } from 'antd'
 import { PageHeader, Space } from '../../../components'
 import { Config } from '../../../config'
+import { usePagination } from '../../../context'
 
 import './index.scss'
 
@@ -16,6 +17,7 @@ export const Teacher: React.FC = () => {
       tags: ['nice', 'developer'],
     },
   ]
+  const { pageSize, handleShowSizeChange } = usePagination()
 
   return (
     <section className='teacher'>
@@ -38,7 +40,10 @@ export const Teacher: React.FC = () => {
           }))}
           bordered={true}
           size='small'
-          pagination={{ pageSize: Config.home.teacher.table.pageSize }}
+          pagination={{
+            pageSize: pageSize || Config.home.teacher.table.pageSize,
+            onShowSizeChange: handleShowSizeChange,
+          }}
           rowKey='index'
         >
           <Column title='#' dataIndex='index' key='index' />
