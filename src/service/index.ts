@@ -1,1 +1,1 @@
-export const val = 'src/service/index.ts'
+export * from './commonAjax'
