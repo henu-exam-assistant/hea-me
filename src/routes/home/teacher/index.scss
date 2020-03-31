@@ -1,3 +1,20 @@
+@import '../../../style/common.scss';
+
 .teacher {
   font-weight: normal;
+
+  &__body-table {
+    // antd的表头未生效，复制出的样式进行覆盖
+    @include antd-table-head();
+  }
+
+  &__body-table-item-name {
+    @include flex();
+
+    height: 100%;
+
+    & .ant-avatar {
+      box-shadow: 0 0 2px 0 #333;
+    }
+  }
 }

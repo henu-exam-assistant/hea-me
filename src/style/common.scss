@@ -11,3 +11,15 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+@mixin antd-table-head() {
+  th {
+    position: relative;
+    padding: 16px;
+    overflow-wrap: break-word;
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 500;
+    background: #fafafa;
+    border-bottom: 1px solid #f0f0f0;
+  }
+}

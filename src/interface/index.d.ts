@@ -4,3 +4,9 @@ declare interface LeftNavItem {
   to: string
   icon: React.ReactElement
 }
+
+declare interface TeacherRecord {
+  name: string
+  workID: string
+  tags: string[]
+}
