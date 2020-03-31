@@ -1,9 +1,4 @@
-import {
-  DashboardOutlined,
-  TeamOutlined,
-  TableOutlined,
-  SolutionOutlined,
-} from '@ant-design/icons'
+import { DashboardOutlined, TeamOutlined, TableOutlined, SolutionOutlined } from '@ant-design/icons'
 
 export const Config = {
   apiUrl: '',
@@ -33,6 +28,15 @@ export const Config = {
         Icon: SolutionOutlined,
       },
     ],
+    manage: {
+      table: { pageSize: 20 },
+    },
+    room: {
+      table: { pageSize: 20 },
+    },
+    teacher: {
+      table: { pageSize: 20 },
+    },
   },
   footer: {
     content: '© 2020 软件学院排考系统',

@@ -11,9 +11,14 @@ interface Props {
 export const Space: React.FC<Props> = props => {
   const { direction = 'horizontal' } = props
 
+  let children
+  if (props.children && !Array.isArray(props.children)) {
+    children = [props.children]
+  } else children = props.children
+
   return (
     <section className={`common-space common-space-${direction}`}>
-      {(props.children as React.ReactNode[]).map((Elem, index) => (
+      {(children as React.ReactNode[]).map((Elem, index) => (
         <div key={index} className={`common-space-${direction}-item`}>
           {Elem}
         </div>
