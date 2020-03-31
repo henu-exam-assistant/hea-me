@@ -1,3 +1,11 @@
+@import './style/common.scss';
+
 .App {
   text-align: center;
+
+  // 重置antd表格默认的对齐方式为居中
+  thead,
+  tbody {
+    text-align: center;
+  }
 }

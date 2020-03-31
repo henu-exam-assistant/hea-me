@@ -8,4 +8,5 @@ module.exports = {
   jsxSingleQuote: true,
   // 箭头函数对否需要括号
   arrowParens: 'avoid',
+  printWidth: 120,
 }

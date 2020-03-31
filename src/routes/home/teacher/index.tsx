@@ -19,12 +19,7 @@ export const Teacher: React.FC = () => {
   return (
     <section className='teacher'>
       <PageHeader text='教师列表'>
-        <Search
-          placeholder='搜索'
-          onSearch={value => console.log(value)}
-          style={{ width: 200 }}
-          size='middle'
-        />
+        <Search placeholder='搜索' onSearch={value => console.log(value)} style={{ width: 200 }} size='middle' />
         <Button type='primary' size='middle'>
           添加
         </Button>
@@ -36,22 +31,20 @@ export const Teacher: React.FC = () => {
       <section className='teacher__body-table'>
         {/* todo 移除mock数据 */}
         <Table
-          dataSource={new Array(60)
-            .fill(data[0])
-            .map((elem: TeacherRecord, index) => ({
-              ...elem,
-              index: index + 1,
-            }))}
+          dataSource={new Array(60).fill(data[0]).map((elem: TeacherRecord, index) => ({
+            ...elem,
+            index: index + 1,
+          }))}
           bordered={true}
           size='small'
           pagination={{ pageSize: 20 }}
+          rowKey='index'
         >
-          <Column title='#' dataIndex='index' key='index' align='center' />
+          <Column title='#' dataIndex='index' key='index' />
           <Column
             title='姓名'
             dataIndex='name'
             key='name'
-            align='center'
             render={elem => (
               <span className='teacher__body-table-item-name'>
                 <Space>
@@ -61,12 +54,11 @@ export const Teacher: React.FC = () => {
               </span>
             )}
           />
-          <Column title='工号' dataIndex='workID' key='workID' align='center' />
+          <Column title='工号' dataIndex='workID' key='workID' />
           {/* https://baibai-mine.oss-cn-shanghai.aliyuncs.com/tb6501982-tinfied.jpg */}
           <Column
             title='操作'
             key='action'
-            align='center'
             render={() => (
               <Button type='danger' size='small'>
                 删除
