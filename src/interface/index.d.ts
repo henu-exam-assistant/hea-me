@@ -1,3 +1,5 @@
+type Timestamp = number | string
+
 // Home
 declare interface LeftNavItem {
   name: string
@@ -11,7 +13,13 @@ declare interface TeacherRecord {
   tags: string[]
 }
 
-declare interface RoomRecord {
+/**
+ * 监考记录
+ */ declare interface RoomRecord {
+  /**
+   * 记录ID
+   */ planid?: number
+
   /**
    * 校区
    */ area: string
@@ -45,8 +53,55 @@ declare interface RoomRecord {
   day: string
   start: string
   end: string
+
   /**
    * 监考老师列表
-   */
-  examteacher: string[]
+   */ examteacher: string[]
+
+  createtime?: Timestamp
+}
+
+/**
+ * 巡考记录
+ */ declare interface ExamRecord {
+  /**
+   * 记录ID
+   */ examid?: number
+
+  /**
+   * 考试标题
+   */ title?: string
+
+  /**
+   * 年级
+   */ grade: string
+
+  /**
+   * 专业
+   */ major: string
+
+  /**
+   * mark 未知标记
+   */ remark?: string
+
+  /**
+   * 考试名/课程名 、课程号
+   */ coursename: string
+  courseid: number
+
+  /**
+   * 任课教师
+   */ teacher: string
+
+  /**
+   * 监考教师列表
+   */ tlist: string[]
+
+  /**
+   * 巡考教师列表
+   */ mlist: string[]
+
+  /**
+   * 对应的考试信息
+   */ planinfo?: RoomRecord
 }
