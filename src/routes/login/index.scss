@@ -1,3 +1,28 @@
+@import '../../style/common.scss';
+
 .login {
-  font-weight: normal;
+  @include flex();
+
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  background-image: url($imgUrl + '/bg-account.jpg');
+  background-size: cover;
+  background-position: center;
+
+  &__body {
+    margin-top: 7.5%;
+  }
+
+  &__body-card {
+    @include flex();
+
+    .ant-card-body {
+      min-width: 500px;
+    }
+  }
+
+  &__body-form-submit {
+    width: 100%;
+  }
 }

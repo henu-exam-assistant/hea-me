@@ -1,5 +1,26 @@
 type Timestamp = number | string
 
+// ajax
+declare interface AjaxOption {
+  path: string
+  method: 'get' | 'post'
+  data: object
+  headers?: { [key: string]: string }
+}
+
+declare interface AjaxResult {
+  code: number
+  msg: string
+  data: object
+}
+
+// Login
+declare interface LoginParams {
+  username: string
+  password: string
+  remember: boolean
+}
+
 // Home
 declare interface LeftNavItem {
   name: string
