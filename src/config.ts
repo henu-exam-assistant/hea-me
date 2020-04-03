@@ -1,7 +1,15 @@
 import { DashboardOutlined, TeamOutlined, TableOutlined, SolutionOutlined } from '@ant-design/icons'
 
+export const apiBaseUrl = 'https://gchenu.leezx.cn/'
+
 export const Config = {
-  apiUrl: '',
+  apiUrl: 'https://gchenu.leezx.cn/',
+  // apiUrls: {
+  //   login: `${apiBaseUrl}/index/login/login`,
+  //   teacherlist: `${apiBaseUrl}/api/admin/teacherlist`,
+  //   roomlist: `${apiBaseUrl}/api/admin/roomlist`,
+  //   examlist: `${apiBaseUrl}/api/admin/examlist`,
+  // },
   home: {
     routes: [
       {

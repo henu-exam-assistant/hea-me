@@ -3,8 +3,8 @@ type Timestamp = number | string
 // ajax
 declare interface AjaxOption {
   path: string
-  method: 'get' | 'post'
-  data: object
+  method?: 'get' | 'post'
+  data?: object
   headers?: { [key: string]: string }
 }
 
